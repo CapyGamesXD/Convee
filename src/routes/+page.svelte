@@ -8,7 +8,7 @@
 	let downloadURL = $state();
 	let format = $state('jpeg');
 	let displayImage = $state('');
-	let quality = $state();
+	let quality = $state(10);
 	async function setImage() {
 		displayImage = '';
 		downloadURL = '';
@@ -31,7 +31,7 @@
 			canvas.width = img.width;
 			canvas.height = img.height;
 			ctx.drawImage(img, 0, 0);
-			downloadURL = canvas.toDataURL(`image/${format}`);
+			downloadURL = canvas.toDataURL(`image/${format}`, quality / 10);
 			console.log('Exported as', `image/${format}`);
 			if (!downloadURL.startsWith(`data:image/${format}`)) {
 				console.log('Export failed!');
@@ -59,7 +59,7 @@
 	<div class="divider"></div>
 	<div class="bubble">
 		<label>
-			<input type="file" bind:files onchange={(e) => setImage(e)} />
+			<input class="hidden" type="file" bind:files onchange={(e) => setImage(e)} />
 			<Upload class="icon" />
 		</label>
 		<div class="divider"></div>
@@ -72,6 +72,10 @@
 				<option value="webp">WebP (smallest file)</option>
 			</select>
 
+			{#if format !== 'png'}
+				<p>Quality: {quality}</p>
+				<input class="rangeInput" type="range" min="1" max="10" bind:value={quality} />
+			{/if}
 			<button onclick={convertImage} class="convert">Convert!</button>
 		{/if}
 		{#if !displayImage}
