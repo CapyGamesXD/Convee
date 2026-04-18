@@ -13,4 +13,6 @@ It's got a clean, minimalist UI with a bubble-like 3D effect on certain elements
 
 <img width="333" height="431" alt="Screenshot 2026-04-18 at 16 15 50" src="https://github.com/user-attachments/assets/58743e35-f9c0-4302-a289-516b37d273e6" />
 
+<img width="344" height="552" alt="Screenshot 2026-04-18 at 16 22 31" src="https://github.com/user-attachments/assets/ce14e356-bdbb-4b94-b494-a61d63139360" />
+
 
