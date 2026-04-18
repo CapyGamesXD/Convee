@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 
 	let files = $state();
+	let fileInput = $state();
 	let canvas;
 	let downloadURL = $state();
 	let format = $state('jpeg');
@@ -40,9 +41,11 @@
 				);
 				displayImage = '';
 				downloadURL = '';
+				files = [];
+				fileInput.value = '';
 			}
+			files = null;
 		};
-		files = null;
 	}
 </script>
 
@@ -59,7 +62,13 @@
 	<div class="divider"></div>
 	<div class="bubble">
 		<label>
-			<input class="hidden" type="file" bind:files onchange={(e) => setImage(e)} />
+			<input
+				class="hidden"
+				type="file"
+				bind:this={fileInput}
+				bind:files
+				onchange={(e) => setImage(e)}
+			/>
 			<Upload class="icon" />
 		</label>
 		<div class="divider"></div>
