@@ -16,9 +16,21 @@
 			href="https://github.com/CapyGamesXD/Convee">here</a
 		>.
 		<br />
-		Other interesting projects I've made: <br />
+		The benefit of processing on-device are that the image never gets sent to any remote servers, and
+		there's no waiting queue! It's processed almost instantly, and securely.<br />
+	</p>
+	<p>
+		Other interesting projects I've made:<br />
+		<br />
 		<a href="https://lurn.capydesigns.com">LurnAI</a>
 	</p>
 	<div class="divider"></div>
-	<a href="https://lurn.capydesigns.com">Capii</a>
+	<a href="https://capii.capydesigns.com">Capii</a>
+	<div class="divider"></div>
+	<a href="https://liist.capydesigns.com">Liist</a>
+
+	<p>
+		Feel free to check any out! If you experience any issues with the site, please try reloading the
+		page.
+	</p>
 </div>
